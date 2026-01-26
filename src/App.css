@@ -1,0 +1,181 @@
+/* Main App Styles */
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-secondary);
+}
+
+/* Header Styles */
+.app-header {
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.title-icon {
+    font-size: 1.75rem;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 1rem;
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Panes Container - Side by Side Layout */
+.panes-container {
+    display: flex;
+    gap: 1rem;
+    height: calc(100vh - 180px);
+    min-height: 400px;
+}
+
+/* Individual Pane Styling */
+.pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.pane-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+}
+
+.pane-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+}
+
+.pane-icon {
+    font-size: 1.1rem;
+}
+
+.char-count {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* Pane Divider */
+.pane-divider {
+    width: 4px;
+    background-color: var(--border-color);
+    border-radius: 2px;
+    cursor: col-resize;
+    transition: background-color 0.2s ease;
+}
+
+.pane-divider:hover {
+    background-color: var(--accent-color);
+}
+
+/* Footer Styles */
+.app-footer {
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+}
+
+.app-footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.app-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design - Stack panes on small screens */
+@media (max-width: 768px) {
+    .app-header {
+        padding: 0.5rem 1rem;
+    }
+
+    .app-title {
+        font-size: 1.25rem;
+    }
+
+    .title-icon {
+        font-size: 1.5rem;
+    }
+
+    .main-content {
+        padding: 0.5rem;
+    }
+
+    .panes-container {
+        flex-direction: column;
+        height: auto;
+        min-height: calc(100vh - 200px);
+    }
+
+    .pane {
+        min-height: 300px;
+        max-height: 50vh;
+    }
+
+    .pane-divider {
+        width: 100%;
+        height: 4px;
+        cursor: row-resize;
+    }
+
+    .app-footer {
+        padding: 0.75rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .app-title span:not(.title-icon) {
+        font-size: 1rem;
+    }
+
+    .pane-header {
+        padding: 0.5rem 0.75rem;
+    }
+}
