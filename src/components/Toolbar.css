@@ -3,7 +3,7 @@
 .toolbar {
     background-color: var(--bg-primary);
     border-bottom: 1px solid var(--border-color);
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
 }
 
 .toolbar-content {
@@ -13,6 +13,20 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+}
+
+.toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
 }
 
 .toolbar-group {
@@ -86,20 +100,14 @@
     border: 1px solid #ef4444;
 }
 
-.button-danger:hover:not(:disabled) {
-    background-color: #ef4444;
-    color: white;
-    transform: translateY(-1px);
-}
-
-.button-danger:active:not(:disabled) {
-    transform: translateY(0);
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .toolbar {
         padding: 0.5rem 1rem;
+    }
+
+    .title-text {
+        display: none;
     }
 
     .toolbar-button {
