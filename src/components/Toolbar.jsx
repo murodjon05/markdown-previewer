@@ -99,9 +99,9 @@ function Toolbar({
                     <button
                         className="toolbar-button theme-toggle"
                         onClick={onToggleTheme}
-                        title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+                        title={isDarkMode ? 'Dark mode' : 'Light mode'}
                     >
-                        {isDarkMode ? '☀️' : '🌙'}
+                        {isDarkMode ? '🌙' : '☀️'}
                     </button>
                 </div>
             </div>

@@ -34,6 +34,24 @@
     gap: 0.5rem;
 }
 
+/* Theme Toggle */
+.theme-toggle {
+    padding: 0.4rem 0.5rem;
+    font-size: 1rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.theme-toggle:hover {
+    background: var(--border-color);
+}
+
+[data-theme="dark"] .theme-toggle {
+    background: #1e293b;
+    border-color: #475569;
+}
+
 /* Button Base Styles */
 .toolbar-button {
     display: inline-flex;
